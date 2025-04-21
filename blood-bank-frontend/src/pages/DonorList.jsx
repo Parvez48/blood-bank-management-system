@@ -5,13 +5,9 @@ const DonorList = () => {
 
   useEffect(() => {
     const fetchDonors = async () => {
-<<<<<<< HEAD
       const res = await fetch(
         "https://blood-bank-management-system-2-apm2.onrender.com"
       );
-=======
-      const res = await fetch("https://blood-bank-management-system-2-apm2.onrender.com");
->>>>>>> 34a224bdeb1a3d911174ef830efa1e78afe72025
       const data = await res.json();
       setDonors(data);
     };
