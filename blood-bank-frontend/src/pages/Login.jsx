@@ -15,8 +15,6 @@ const Login = () => {
     e.preventDefault();
     setMessage("");
 
-    
-
     // Optional basic validation
     if (!email || !password) {
       setMessage("Please fill in all fields");
@@ -26,13 +24,16 @@ const Login = () => {
     setLoading(true);
 
     try {
-      const res = await fetch("http://localhost:5000/api/auth/login", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ email, password }),
-      });
+      const res = await fetch(
+        "https://blood-bank-management-system-2-apm2.onrender.com",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ email, password }),
+        }
+      );
 
       const data = await res.json();
 

@@ -10,10 +10,10 @@ const Profile = () => {
     const token = localStorage.getItem("token");
     try {
       const [donationRes, requestRes] = await Promise.all([
-        fetch("http://localhost:5000/api/donate/my", {
+        fetch("https://blood-bank-management-system-2-apm2.onrender.com", {
           headers: { Authorization: token },
         }),
-        fetch("http://localhost:5000/api/request/my", {
+        fetch("https://blood-bank-management-system-2-apm2.onrender.com", {
           headers: { Authorization: token },
         }),
       ]);

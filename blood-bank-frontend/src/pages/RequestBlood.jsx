@@ -11,19 +11,22 @@ const RequestBlood = () => {
     e.preventDefault();
     const token = localStorage.getItem("token");
 
-    const res = await fetch("http://localhost:5000/api/request", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        Authorization: token,
-      },
-      body: JSON.stringify({
-        fullName,
-        phone,
-        bloodGroup,
-        location,
-      }),
-    });
+    const res = await fetch(
+      "https://blood-bank-management-system-2-apm2.onrender.com",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: token,
+        },
+        body: JSON.stringify({
+          fullName,
+          phone,
+          bloodGroup,
+          location,
+        }),
+      }
+    );
 
     const data = await res.json();
     if (res.ok) {
