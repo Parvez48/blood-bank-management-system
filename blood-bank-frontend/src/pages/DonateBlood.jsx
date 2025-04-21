@@ -11,6 +11,7 @@ const DonateBlood = () => {
     e.preventDefault();
     const token = localStorage.getItem("token");
 
+<<<<<<< HEAD
     const res = await fetch(
       "https://blood-bank-management-system-2-apm2.onrender.com",
       {
@@ -27,6 +28,21 @@ const DonateBlood = () => {
         }),
       }
     );
+=======
+    const res = await fetch("https://blood-bank-management-system-2-apm2.onrender.com", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: token,
+      },
+      body: JSON.stringify({
+        fullName,
+        phone,
+        bloodGroup,
+        location,
+      }),
+    });
+>>>>>>> 34a224bdeb1a3d911174ef830efa1e78afe72025
 
     const data = await res.json();
     if (res.ok) {

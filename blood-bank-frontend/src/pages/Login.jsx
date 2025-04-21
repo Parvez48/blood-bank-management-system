@@ -24,6 +24,7 @@ const Login = () => {
     setLoading(true);
 
     try {
+<<<<<<< HEAD
       const res = await fetch(
         "https://blood-bank-management-system-2-apm2.onrender.com",
         {
@@ -34,6 +35,15 @@ const Login = () => {
           body: JSON.stringify({ email, password }),
         }
       );
+=======
+      const res = await fetch("https://blood-bank-management-system-2-apm2.onrender.com", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ email, password }),
+      });
+>>>>>>> 34a224bdeb1a3d911174ef830efa1e78afe72025
 
       const data = await res.json();
 
