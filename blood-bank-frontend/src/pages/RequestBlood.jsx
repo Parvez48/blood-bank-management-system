@@ -11,7 +11,7 @@ const RequestBlood = () => {
     e.preventDefault();
     const token = localStorage.getItem("token");
 
-    const res = await fetch("http://localhost:5000/api/request", {
+    const res = await fetch("https://blood-bank-management-system-2-apm2.onrender.com", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
