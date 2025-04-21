@@ -26,7 +26,7 @@ const Login = () => {
     setLoading(true);
 
     try {
-      const res = await fetch("http://localhost:5000/api/auth/login", {
+      const res = await fetch("https://blood-bank-management-system-2-apm2.onrender.com", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
